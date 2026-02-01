@@ -1,0 +1,175 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:system-ui, sans-serif;
+}
+
+:root{
+  --bg:#0f172a;
+  --card:#020617;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --accent:#22c55e;
+  --danger:#ef4444;
+}
+
+body.light{
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#64748b;
+}
+
+body{
+  min-height:100vh;
+  background:radial-gradient(circle at top,#020617,var(--bg));
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.app{
+  width:100%;
+  max-width:440px;
+  background:var(--card);
+  padding:24px;
+  border-radius:18px;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+h1{
+  text-align:center;
+  margin-bottom:16px;
+  color:var(--accent);
+}
+
+/* Progress */
+.progress{
+  height:6px;
+  background:#1e293b;
+  border-radius:6px;
+  overflow:hidden;
+  margin-bottom:12px;
+}
+#progress-bar{
+  height:100%;
+  width:0%;
+  background:var(--accent);
+  transition:.3s;
+}
+
+/* Form */
+#todo-form{
+  display:grid;
+  grid-template-columns:1fr auto auto;
+  gap:8px;
+  margin-bottom:14px;
+}
+
+#todo-input,
+select,
+input[type="date"]{
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #1e293b;
+  background:transparent;
+  color:var(--text);
+}
+
+#todo-form button{
+  grid-column:1/-1;
+  padding:10px;
+  border-radius:12px;
+  border:none;
+  background:var(--accent);
+  color:#020617;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* List */
+#todo-list{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-bottom:14px;
+}
+
+.todo{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px;
+  border-radius:12px;
+  background:rgba(255,255,255,.04);
+}
+
+.todo.done span{
+  text-decoration:line-through;
+  color:var(--muted);
+}
+
+.todo.overdue{
+  border-left:4px solid var(--danger);
+  background:rgba(239,68,68,.08);
+}
+
+.todo span{
+  flex:1;
+}
+
+.badge{
+  font-size:11px;
+  padding:2px 6px;
+  border-radius:6px;
+  margin-left:6px;
+}
+.badge.high{background:#ef4444;}
+.badge.medium{background:#f59e0b;}
+.badge.low{background:#22c55e;}
+
+.todo-actions button{
+  background:none;
+  border:none;
+  color:var(--muted);
+  cursor:pointer;
+  margin-left:6px;
+}
+.todo-actions .delete:hover{color:var(--danger);}
+
+/* Footer */
+.footer{
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
+  color:var(--muted);
+}
+
+.filters button{
+  background:none;
+  border:none;
+  color:var(--muted);
+  cursor:pointer;
+}
+.filters .active{
+  color:var(--accent);
+  font-weight:600;
+}
+
+.controls{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin-top:12px;
+}
+
+.controls button{
+  background:#111;
+  color:#fff;
+  border:1px solid #333;
+  border-radius:10px;
+  padding:6px 12px;
+}

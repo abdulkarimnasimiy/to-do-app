@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productive To-Do</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+
+  <div class="app">
+    <h1>📝 Productive To-Do</h1>
+
+    <!-- Progress -->
+    <div class="progress">
+      <div id="progress-bar"></div>
+    </div>
+
+    <!-- Form -->
+    <form id="todo-form">
+      <input id="todo-input" type="text" placeholder="Add a task..." />
+
+      <select id="priority">
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+        <option value="low">Low</option>
+      </select>
+
+      <input type="date" id="due-date" />
+
+      <button>Add</button>
+    </form>
+
+    <!-- List -->
+    <ul id="todo-list"></ul>
+
+    <!-- Footer -->
+    <div class="footer">
+      <span id="count">0 tasks</span>
+
+      <div class="filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="active">Active</button>
+        <button data-filter="done">Done</button>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="theme">🌓 Theme</button>
+      <button id="sound">🔊 Sound</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
