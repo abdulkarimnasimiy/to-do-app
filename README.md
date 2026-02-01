@@ -24,8 +24,7 @@ Simple task management application built with **Vanilla JavaScript**.
 
 ## ▶️ Live Demo
 
-*(Netlify linkni shu yerga qo‘shing)*
-
+[*Netlify LINK*](https://to-do-nasimiy.netlify.app/)
 ---
 
 ## 📂 Project Structure
